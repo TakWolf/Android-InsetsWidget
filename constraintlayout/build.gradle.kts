@@ -31,7 +31,7 @@ android {
 }
 
 dependencies {
-    compileOnly("androidx.core:core-ktx:1.12.0")
+    compileOnly("androidx.core:core-ktx:1.13.0")
     compileOnly("androidx.constraintlayout:constraintlayout:2.1.4")
     api(project(":insetswidget"))
 }
