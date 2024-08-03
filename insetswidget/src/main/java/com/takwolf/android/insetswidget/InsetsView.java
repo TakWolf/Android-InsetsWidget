@@ -35,10 +35,10 @@ public class InsetsView extends View implements InsetsWidget {
     }
 
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsView, defStyleAttr, defStyleRes);
-        helper.initInsetsType(a, R.styleable.InsetsView_isw_insetsType);
-        helper.initInsetsSmoothResize(a, R.styleable.InsetsView_isw_insetsSmoothResize);
-        a.recycle();
+        try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsView, defStyleAttr, defStyleRes)) {
+            helper.initInsetsType(a, R.styleable.InsetsView_isw_insetsType);
+            helper.initInsetsSmoothResize(a, R.styleable.InsetsView_isw_insetsSmoothResize);
+        }
     }
 
     @NonNull

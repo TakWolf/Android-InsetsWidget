@@ -36,18 +36,18 @@ public class InsetsLinearLayout extends LinearLayout implements InsetsLayout {
     }
 
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsLinearLayout, defStyleAttr, defStyleRes);
-        helper.initInsetsType(a, R.styleable.InsetsLinearLayout_isw_insetsType);
-        helper.initInsetsSmoothResize(a, R.styleable.InsetsLinearLayout_isw_insetsSmoothResize);
-        helper.initInsetsPaddingLeft(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingLeft);
-        helper.initInsetsPaddingTop(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingTop);
-        helper.initInsetsPaddingRight(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingRight);
-        helper.initInsetsPaddingBottom(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingBottom);
-        helper.initInsetsColorLeft(a, R.styleable.InsetsLinearLayout_isw_insetsColorLeft);
-        helper.initInsetsColorTop(a, R.styleable.InsetsLinearLayout_isw_insetsColorTop);
-        helper.initInsetsColorRight(a, R.styleable.InsetsLinearLayout_isw_insetsColorRight);
-        helper.initInsetsColorBottom(a, R.styleable.InsetsLinearLayout_isw_insetsColorBottom);
-        a.recycle();
+        try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsLinearLayout, defStyleAttr, defStyleRes)) {
+            helper.initInsetsType(a, R.styleable.InsetsLinearLayout_isw_insetsType);
+            helper.initInsetsSmoothResize(a, R.styleable.InsetsLinearLayout_isw_insetsSmoothResize);
+            helper.initInsetsPaddingLeft(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingLeft);
+            helper.initInsetsPaddingTop(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingTop);
+            helper.initInsetsPaddingRight(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingRight);
+            helper.initInsetsPaddingBottom(a, R.styleable.InsetsLinearLayout_isw_insetsPaddingBottom);
+            helper.initInsetsColorLeft(a, R.styleable.InsetsLinearLayout_isw_insetsColorLeft);
+            helper.initInsetsColorTop(a, R.styleable.InsetsLinearLayout_isw_insetsColorTop);
+            helper.initInsetsColorRight(a, R.styleable.InsetsLinearLayout_isw_insetsColorRight);
+            helper.initInsetsColorBottom(a, R.styleable.InsetsLinearLayout_isw_insetsColorBottom);
+        }
     }
 
     @NonNull

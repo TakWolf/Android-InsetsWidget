@@ -39,18 +39,18 @@ public class InsetsConstraintLayout extends ConstraintLayout implements InsetsLa
     }
 
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsConstraintLayout, defStyleAttr, defStyleRes);
-        helper.initInsetsType(a, R.styleable.InsetsConstraintLayout_isw_insetsType);
-        helper.initInsetsSmoothResize(a, R.styleable.InsetsConstraintLayout_isw_insetsSmoothResize);
-        helper.initInsetsPaddingLeft(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingLeft);
-        helper.initInsetsPaddingTop(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingTop);
-        helper.initInsetsPaddingRight(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingRight);
-        helper.initInsetsPaddingBottom(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingBottom);
-        helper.initInsetsColorLeft(a, R.styleable.InsetsConstraintLayout_isw_insetsColorLeft);
-        helper.initInsetsColorTop(a, R.styleable.InsetsConstraintLayout_isw_insetsColorTop);
-        helper.initInsetsColorRight(a, R.styleable.InsetsConstraintLayout_isw_insetsColorRight);
-        helper.initInsetsColorBottom(a, R.styleable.InsetsConstraintLayout_isw_insetsColorBottom);
-        a.recycle();
+        try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsConstraintLayout, defStyleAttr, defStyleRes)) {
+            helper.initInsetsType(a, R.styleable.InsetsConstraintLayout_isw_insetsType);
+            helper.initInsetsSmoothResize(a, R.styleable.InsetsConstraintLayout_isw_insetsSmoothResize);
+            helper.initInsetsPaddingLeft(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingLeft);
+            helper.initInsetsPaddingTop(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingTop);
+            helper.initInsetsPaddingRight(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingRight);
+            helper.initInsetsPaddingBottom(a, R.styleable.InsetsConstraintLayout_isw_insetsPaddingBottom);
+            helper.initInsetsColorLeft(a, R.styleable.InsetsConstraintLayout_isw_insetsColorLeft);
+            helper.initInsetsColorTop(a, R.styleable.InsetsConstraintLayout_isw_insetsColorTop);
+            helper.initInsetsColorRight(a, R.styleable.InsetsConstraintLayout_isw_insetsColorRight);
+            helper.initInsetsColorBottom(a, R.styleable.InsetsConstraintLayout_isw_insetsColorBottom);
+        }
     }
 
     @NonNull

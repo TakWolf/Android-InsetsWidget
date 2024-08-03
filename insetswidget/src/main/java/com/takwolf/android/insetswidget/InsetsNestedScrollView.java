@@ -30,18 +30,18 @@ public class InsetsNestedScrollView extends NestedScrollView implements InsetsLa
     }
 
     private void init(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsNestedScrollView, defStyleAttr, 0);
-        helper.initInsetsType(a, R.styleable.InsetsNestedScrollView_isw_insetsType);
-        helper.initInsetsSmoothResize(a, R.styleable.InsetsNestedScrollView_isw_insetsSmoothResize);
-        helper.initInsetsPaddingLeft(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingLeft);
-        helper.initInsetsPaddingTop(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingTop);
-        helper.initInsetsPaddingRight(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingRight);
-        helper.initInsetsPaddingBottom(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingBottom);
-        helper.initInsetsColorLeft(a, R.styleable.InsetsNestedScrollView_isw_insetsColorLeft);
-        helper.initInsetsColorTop(a, R.styleable.InsetsNestedScrollView_isw_insetsColorTop);
-        helper.initInsetsColorRight(a, R.styleable.InsetsNestedScrollView_isw_insetsColorRight);
-        helper.initInsetsColorBottom(a, R.styleable.InsetsNestedScrollView_isw_insetsColorBottom);
-        a.recycle();
+        try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsNestedScrollView, defStyleAttr, 0)) {
+            helper.initInsetsType(a, R.styleable.InsetsNestedScrollView_isw_insetsType);
+            helper.initInsetsSmoothResize(a, R.styleable.InsetsNestedScrollView_isw_insetsSmoothResize);
+            helper.initInsetsPaddingLeft(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingLeft);
+            helper.initInsetsPaddingTop(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingTop);
+            helper.initInsetsPaddingRight(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingRight);
+            helper.initInsetsPaddingBottom(a, R.styleable.InsetsNestedScrollView_isw_insetsPaddingBottom);
+            helper.initInsetsColorLeft(a, R.styleable.InsetsNestedScrollView_isw_insetsColorLeft);
+            helper.initInsetsColorTop(a, R.styleable.InsetsNestedScrollView_isw_insetsColorTop);
+            helper.initInsetsColorRight(a, R.styleable.InsetsNestedScrollView_isw_insetsColorRight);
+            helper.initInsetsColorBottom(a, R.styleable.InsetsNestedScrollView_isw_insetsColorBottom);
+        }
     }
 
     @NonNull
