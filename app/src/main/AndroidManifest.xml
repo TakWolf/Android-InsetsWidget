@@ -5,7 +5,7 @@
         android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:theme="@style/Theme.App">
+        android:theme="@style/AppTheme">
 
         <activity
             android:name=".MainActivity"
@@ -18,17 +18,17 @@
 
         <activity
             android:name=".Demo1Activity"
-            android:theme="@style/Theme.App.Demo"
+            android:theme="@style/AppTheme.Demo"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
             android:name=".Demo2Activity"
-            android:theme="@style/Theme.App.Demo"
+            android:theme="@style/AppTheme.Demo"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
             android:name=".Demo3Activity"
-            android:theme="@style/Theme.App.Demo" />
+            android:theme="@style/AppTheme.Demo" />
 
     </application>
 
