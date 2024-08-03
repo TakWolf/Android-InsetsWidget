@@ -7,7 +7,7 @@
 
 一组可以动态适配 `WindowInsets` 尺寸的组件，用于快速实现沉浸式布局效果。
 
-您可以通过阅读官方文章来了解什么是 [边到边设计](https://developer.android.com/training/gestures/edge-to-edge) 。
+您可以通过阅读官方文章来了解什么是 [在应用中全屏显示内容](https://developer.android.com/develop/ui/views/layout/edge-to-edge?hl=zh-cn) 。
 
 ## Usage
 
