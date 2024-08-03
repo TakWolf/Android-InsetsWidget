@@ -37,5 +37,5 @@ public final class InsetsSpace extends InsetsView {
     }
 
     @Override
-    protected void onDraw(Canvas canvas) {}
+    protected void onDraw(@NonNull Canvas canvas) {}
 }
