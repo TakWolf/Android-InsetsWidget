@@ -16,6 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Android-InsetsWidget"
 
-include(":insetswidget")
-include(":constraintlayout")
-include(":app")
+include("insetswidget")
+include("constraintlayout")
+include("app")
