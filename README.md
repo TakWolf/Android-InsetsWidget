@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.activity:activity-ktx:1.9.0")
     implementation("com.github.TakWolf.Android-InsetsWidget:insetswidget:0.0.1")
     // 可选。为 `ConstraintLayout` 添加支持。
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -29,30 +29,13 @@ dependencies {
 }
 ```
 
-在主题中添加下面的属性，使状态栏和导航栏颜色透明：
-
-```xml
-<style name="Theme.ForYourApp">
-    <item name="android:statusBarColor">@android:color/transparent</item>
-    <item name="android:navigationBarColor">@android:color/transparent</item>
-</style>
-```
-
-在 API 29 以上，需要额外添加下面的配置来关闭导航栏对比度：
-
-```xml
-<style name="Theme.ForYourApp">
-    <item name="android:enforceNavigationBarContrast">false</item>
-</style>
-```
-
-在 `Activity` 中启用延伸布局：
+在 `Activity` 中启用「边到边」：
 
 ```kotlin
 class SomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_some)
     }
 }

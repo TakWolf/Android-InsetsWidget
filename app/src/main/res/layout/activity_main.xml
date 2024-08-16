@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<com.takwolf.android.insetswidget.constraintlayout.InsetsConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:isw_insetsType="statusBars|navigationBars|ime"
+    app:isw_insetsColorTop="@color/app_primary_dark"
+    app:isw_insetsColorBottom="@android:color/white"
+    app:isw_insetsColorLeft="@android:color/white"
+    app:isw_insetsColorRight="@android:color/white">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -56,4 +61,4 @@
 
     </androidx.core.widget.NestedScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.takwolf.android.insetswidget.constraintlayout.InsetsConstraintLayout>
