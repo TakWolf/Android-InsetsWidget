@@ -21,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.activity:activity-ktx:1.9.0")
     implementation("com.github.TakWolf.Android-InsetsWidget:insetswidget:0.0.1")
     // 可选。为 `ConstraintLayout` 添加支持。
