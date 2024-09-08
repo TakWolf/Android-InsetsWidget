@@ -7,8 +7,8 @@
     app:isw_insetsType="statusBars|navigationBars|ime"
     app:isw_insetsColorTop="@color/translucent_system_bars"
     app:isw_insetsColorBottom="@color/translucent_system_bars"
-    app:isw_insetsColorLeft="@color/translucent_system_bars"
-    app:isw_insetsColorRight="@color/translucent_system_bars">
+    app:isw_insetsColorLeft="@android:color/white"
+    app:isw_insetsColorRight="@android:color/white">
 
     <EditText
         android:layout_width="match_parent"
