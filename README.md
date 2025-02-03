@@ -4,6 +4,7 @@
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen)](https://android-arsenal.com/api?level=21)
 [![License](https://img.shields.io/github/license/TakWolf/Android-InsetsWidget)](https://www.apache.org/licenses/LICENSE-2.0)
 [![JitPack](https://jitpack.io/v/TakWolf/Android-InsetsWidget.svg)](https://jitpack.io/#TakWolf/Android-InsetsWidget)
+[<img src="https://api.gitsponsors.com/api/badge/img?id=453300769" height="20">](https://api.gitsponsors.com/api/badge/link?p=wOUe+RXSCgpKpvEuoMyq6wElGLcubBiCsABr+VoG+Lmq4VHxCc6gtfuwegLB4lJikeN166vPTzxoP8G0b1epSK9UAFBu/mozNzdJN2TJJJZQeKNJruL29ygD4QrmNDIJW11OnQYyV8WMstuzXqUlOA==)
 
 一组可以动态适配 `WindowInsets` 尺寸的组件，用于快速实现沉浸式布局效果。
 
