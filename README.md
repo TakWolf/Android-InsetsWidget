@@ -35,8 +35,8 @@ dependencies {
 ```kotlin
 class SomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_some)
     }
 }
