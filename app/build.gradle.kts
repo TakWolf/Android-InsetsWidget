@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.takwolf.android.demo.insetswidget"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 36
         versionCode = 1
         versionName = "0.0.1"
@@ -41,7 +41,7 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.17.0")
     implementation("androidx.appcompat:appcompat:1.7.1")
-    implementation("androidx.activity:activity-ktx:1.11.0")
+    implementation("androidx.activity:activity-ktx:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation(project(":insetswidget"))
     implementation(project(":constraintlayout"))
