@@ -11,8 +11,10 @@
         <flag name="mandatorySystemGestures" value="0x00000020" />
         <flag name="tappableElement" value="0x00000040" />
         <flag name="displayCutout" value="0x00000080" />
-        <flag name="systemBars" value="0x00000007" />
-        <flag name="all" value="0xffffffff" />
+        <flag name="window_decor" value="0x00000100" />
+        <flag name="system_overlays" value="0x00000200" />
+        <flag name="systemBars" value="0x00000207" />
+        <flag name="all" value="0xFFFFFFFF" />
     </attr>
     <attr name="isw_insetsSmoothResize" format="boolean" />
     <attr name="isw_insetsPaddingLeft" format="boolean" />
