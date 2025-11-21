@@ -115,7 +115,7 @@ abstract class InsetsHelper<V extends View> {
         if (windowInsets == null) {
             return;
         }
-        Insets insets = InsetsUtils.getInsets(windowInsets, insetsType);
+        Insets insets = windowInsets.getInsets(InsetsUtils.convertInsetsType(insetsType));
         if (!this.insets.equals(insets)) {
             this.insets = insets;
             onInsetsUpdated();

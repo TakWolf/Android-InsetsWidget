@@ -1,7 +1,5 @@
 package com.takwolf.android.insetswidget;
 
-import androidx.annotation.NonNull;
-import androidx.core.graphics.Insets;
 import androidx.core.view.HackWindowInsetsCompat;
 import androidx.core.view.WindowInsetsCompat;
 
@@ -11,11 +9,11 @@ final class InsetsUtils {
     private static final int INSETS_TYPE_FIRST = InsetsWidget.INSETS_TYPE_STATUS_BARS;
     private static final int INSETS_TYPE_LAST = InsetsWidget.INSETS_TYPE_SYSTEM_OVERLAYS;
 
-    @NonNull
-    static Insets getInsets(@NonNull WindowInsetsCompat windowInsets, @InsetsWidget.InsetsType int insetsType) {
+    @WindowInsetsCompat.Type.InsetsType
+    static int convertInsetsType(@InsetsWidget.InsetsType int value) {
         int result = 0;
         for (int i = INSETS_TYPE_FIRST; i <= INSETS_TYPE_LAST; i = i << 1) {
-            if ((insetsType & i) != 0) {
+            if ((value & i) != 0) {
                 switch (i) {
                     case InsetsWidget.INSETS_TYPE_STATUS_BARS:
                         result |= WindowInsetsCompat.Type.statusBars();
@@ -50,6 +48,6 @@ final class InsetsUtils {
                 }
             }
         }
-        return windowInsets.getInsets(result);
+        return result;
     }
 }
