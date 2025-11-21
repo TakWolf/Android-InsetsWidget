@@ -1,7 +1,6 @@
 package com.takwolf.android.insetswidget;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.graphics.Insets;
 import androidx.core.view.WindowInsetsCompat;
 
@@ -11,13 +10,8 @@ final class InsetsUtils {
     private static final int INSETS_TYPE_FIRST = InsetsWidget.INSETS_TYPE_STATUS_BARS;
     private static final int INSETS_TYPE_LAST = InsetsWidget.INSETS_TYPE_DISPLAY_CUTOUT;
 
-    static final Insets EMPTY_INSETS = Insets.of(0, 0, 0, 0);
-
     @NonNull
-    static Insets getInsets(@Nullable WindowInsetsCompat windowInsets, @InsetsWidget.InsetsType int insetsType) {
-        if (windowInsets == null) {
-            return EMPTY_INSETS;
-        }
+    static Insets getInsets(@NonNull WindowInsetsCompat windowInsets, @InsetsWidget.InsetsType int insetsType) {
         int result = 0;
         for (int i = INSETS_TYPE_FIRST; i <= INSETS_TYPE_LAST; i = i << 1) {
             if ((insetsType & i) != 0) {

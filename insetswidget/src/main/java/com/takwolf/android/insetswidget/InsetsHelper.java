@@ -23,7 +23,7 @@ abstract class InsetsHelper<V extends View> {
     @Nullable private WindowInsetsCompat windowInsetsAnimated;
     private boolean windowInsetsAnimationRunning = false;
 
-    @NonNull private Insets insets = InsetsUtils.EMPTY_INSETS;
+    @NonNull private Insets insets = Insets.NONE;
 
     protected InsetsHelper(@NonNull V view) {
         this.view = view;
