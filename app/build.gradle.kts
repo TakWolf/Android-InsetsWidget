@@ -5,7 +5,9 @@ plugins {
 
 android {
     namespace = "com.takwolf.android.demo.insetswidget"
-    compileSdk = 36
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
         applicationId = "com.takwolf.android.demo.insetswidget"
