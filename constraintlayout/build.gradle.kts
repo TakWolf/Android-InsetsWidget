@@ -37,7 +37,7 @@ mavenPublishing {
 
     pom {
         name.set("Android-InsetsWidget")
-        description.set("An Android widget for handling edge-to-edge display.")
+        description.set("Android widgets for handling edge-to-edge display.")
         url.set("https://github.com/TakWolf/Android-InsetsWidget")
         inceptionYear.set("2025")
         licenses {
