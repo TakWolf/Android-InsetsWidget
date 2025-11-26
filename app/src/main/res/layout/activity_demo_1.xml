@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.takwolf.android.insetswidget.InsetsLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:isw_insetsType="statusBars|navigationBars"
+    app:isw_insetsPaddingTop="false"
+    app:isw_insetsPaddingBottom="false"
+    app:isw_insetsColorTop="@color/translucent_system_bars"
+    app:isw_insetsColorBottom="@color/translucent_system_bars"
+    app:isw_insetsColorLeft="@android:color/white"
+    app:isw_insetsColorRight="@android:color/white">
+
+    <com.takwolf.android.insetswidget.InsetsSpace
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isw_insetsType="statusBars" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:background="?colorPrimary" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:inputType="text"
+        android:hint="@string/please_input"
+        android:importantForAutofill="no"
+        android:background="@android:color/white" />
+
+    <com.takwolf.android.insetswidget.InsetsSpace
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isw_insetsType="navigationBars|ime" />
+
+</com.takwolf.android.insetswidget.InsetsLinearLayout>

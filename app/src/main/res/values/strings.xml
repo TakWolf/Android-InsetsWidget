@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InsetsWidget</string>
+    <string name="demo_1">Demo 1</string>
+    <string name="demo_2">Demo 2</string>
+    <string name="demo_3">Demo 3</string>
+    <string name="please_input">Please input…</string>
+</resources>

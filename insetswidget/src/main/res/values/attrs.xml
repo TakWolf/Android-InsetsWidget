@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="isw_insetsType">
+        <flag name="none" value="0x00000000" />
+        <flag name="statusBars" value="0x00000001" />
+        <flag name="navigationBars" value="0x00000002" />
+        <flag name="captionBar" value="0x00000004" />
+        <flag name="ime" value="0x00000008" />
+        <flag name="systemGestures" value="0x00000010" />
+        <flag name="mandatorySystemGestures" value="0x00000020" />
+        <flag name="tappableElement" value="0x00000040" />
+        <flag name="displayCutout" value="0x00000080" />
+        <flag name="windowDecor" value="0x00000100" />
+        <flag name="systemOverlays" value="0x00000200" />
+        <flag name="systemBars" value="0x00000207" />
+        <flag name="all" value="0xFFFFFFFF" />
+    </attr>
+    <attr name="isw_insetsSmoothResize" format="boolean" />
+    <attr name="isw_insetsPaddingLeft" format="boolean" />
+    <attr name="isw_insetsPaddingTop" format="boolean" />
+    <attr name="isw_insetsPaddingRight" format="boolean" />
+    <attr name="isw_insetsPaddingBottom" format="boolean" />
+    <attr name="isw_insetsColorLeft" format="color" />
+    <attr name="isw_insetsColorTop" format="color" />
+    <attr name="isw_insetsColorRight" format="color" />
+    <attr name="isw_insetsColorBottom" format="color" />
+
+    <declare-styleable name="InsetsView">
+        <attr name="isw_insetsType" />
+        <attr name="isw_insetsSmoothResize" />
+    </declare-styleable>
+
+    <declare-styleable name="InsetsFrameLayout">
+        <attr name="isw_insetsType" />
+        <attr name="isw_insetsSmoothResize" />
+        <attr name="isw_insetsPaddingLeft" />
+        <attr name="isw_insetsPaddingTop" />
+        <attr name="isw_insetsPaddingRight" />
+        <attr name="isw_insetsPaddingBottom" />
+        <attr name="isw_insetsColorLeft" />
+        <attr name="isw_insetsColorTop" />
+        <attr name="isw_insetsColorRight" />
+        <attr name="isw_insetsColorBottom" />
+    </declare-styleable>
+
+    <declare-styleable name="InsetsLinearLayout">
+        <attr name="isw_insetsType" />
+        <attr name="isw_insetsSmoothResize" />
+        <attr name="isw_insetsPaddingLeft" />
+        <attr name="isw_insetsPaddingTop" />
+        <attr name="isw_insetsPaddingRight" />
+        <attr name="isw_insetsPaddingBottom" />
+        <attr name="isw_insetsColorLeft" />
+        <attr name="isw_insetsColorTop" />
+        <attr name="isw_insetsColorRight" />
+        <attr name="isw_insetsColorBottom" />
+    </declare-styleable>
+
+    <declare-styleable name="InsetsNestedScrollView">
+        <attr name="isw_insetsType" />
+        <attr name="isw_insetsSmoothResize" />
+        <attr name="isw_insetsPaddingLeft" />
+        <attr name="isw_insetsPaddingTop" />
+        <attr name="isw_insetsPaddingRight" />
+        <attr name="isw_insetsPaddingBottom" />
+        <attr name="isw_insetsColorLeft" />
+        <attr name="isw_insetsColorTop" />
+        <attr name="isw_insetsColorRight" />
+        <attr name="isw_insetsColorBottom" />
+    </declare-styleable>
+
+</resources>

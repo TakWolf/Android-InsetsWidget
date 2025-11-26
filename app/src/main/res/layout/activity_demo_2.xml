@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.takwolf.android.insetswidget.constraintlayout.InsetsConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:isw_insetsType="statusBars|navigationBars|ime"
+    app:isw_insetsColorTop="@color/translucent_system_bars"
+    app:isw_insetsColorBottom="@color/translucent_system_bars"
+    app:isw_insetsColorLeft="@android:color/white"
+    app:isw_insetsColorRight="@android:color/white">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:inputType="text"
+        android:hint="@string/please_input"
+        android:importantForAutofill="no"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</com.takwolf.android.insetswidget.constraintlayout.InsetsConstraintLayout>

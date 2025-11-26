@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="InsetsConstraintLayout">
+        <attr name="isw_insetsType" />
+        <attr name="isw_insetsSmoothResize" />
+        <attr name="isw_insetsPaddingLeft" />
+        <attr name="isw_insetsPaddingTop" />
+        <attr name="isw_insetsPaddingRight" />
+        <attr name="isw_insetsPaddingBottom" />
+        <attr name="isw_insetsColorLeft" />
+        <attr name="isw_insetsColorTop" />
+        <attr name="isw_insetsColorRight" />
+        <attr name="isw_insetsColorBottom" />
+    </declare-styleable>
+
+</resources>
