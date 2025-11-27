@@ -1,9 +1,9 @@
 # Android - InsetsWidget
 
-[![Android](https://img.shields.io/badge/android-23%2B-brightgreen)](https://developer.android.com)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.takwolf.android.insetswidget/insetswidget)](https://central.sonatype.com/artifact/io.github.takwolf.android.insetswidget/insetswidget)
+[![Android](https://img.shields.io/badge/android-23%2B-brightgreen?style=flat-square)](https://developer.android.com)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.takwolf.android.insetswidget/insetswidget?style=flat-square)](https://central.sonatype.com/artifact/io.github.takwolf.android.insetswidget/insetswidget)
 
-一组处理 [在视图中以无边框方式显示内容](https://developer.android.com/develop/ui/views/layout/edge-to-edge?hl=zh-cn) 的控件，用于快速实现沉浸式布局效果。
+一组处理 [在视图中以无边框方式显示内容](https://developer.android.com/develop/ui/views/layout/edge-to-edge?hl=zh-cn) 的组件，用于快速实现沉浸式布局效果。
 
 ## Snippets
 
