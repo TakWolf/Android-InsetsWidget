@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -32,16 +31,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.17.0")
     implementation("androidx.appcompat:appcompat:1.7.1")
-    implementation("androidx.activity:activity-ktx:1.12.0")
+    implementation("androidx.activity:activity-ktx:1.12.3")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation(project(":insetswidget"))
     implementation(project(":constraintlayout"))
