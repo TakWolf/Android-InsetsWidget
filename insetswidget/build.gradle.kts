@@ -1,13 +1,14 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
     id("com.vanniktech.maven.publish")
 }
 
 android {
     namespace = "com.takwolf.android.insetswidget"
     compileSdk {
-        version = release(36)
+        version = release(37) {
+            minorApiLevel = 0
+        }
     }
 
     defaultConfig {
@@ -20,14 +21,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
 
 dependencies {
-    compileOnly("androidx.core:core-ktx:1.17.0")
+    compileOnly("androidx.core:core-ktx:1.18.0")
 }
 
 mavenPublishing {
