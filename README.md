@@ -9,7 +9,7 @@
 
 ```kotlin
 implementation("androidx.core:core-ktx:1.17.0")
-implementation("androidx.activity:activity-ktx:1.12.0")
+implementation("androidx.activity:activity-ktx:1.12.4")
 implementation("io.github.takwolf.android.insetswidget:insetswidget:0.0.1")
 
 // 可选，为 `ConstraintLayout` 添加支持。
