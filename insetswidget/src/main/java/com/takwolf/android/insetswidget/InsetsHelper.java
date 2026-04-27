@@ -3,18 +3,18 @@ package com.takwolf.android.insetswidget;
 import android.content.res.TypedArray;
 import android.view.View;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.StyleableRes;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsAnimationCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.jspecify.annotations.Nullable;
+
 import java.util.List;
 
 abstract class InsetsHelper<V extends View> {
-    @NonNull private final V view;
+    private final V view;
 
     @InsetsWidget.InsetsType private int insetsType;
     private boolean insetsSmoothResize;
@@ -23,9 +23,9 @@ abstract class InsetsHelper<V extends View> {
     @Nullable private WindowInsetsCompat windowInsetsAnimated;
     private boolean windowInsetsAnimationRunning = false;
 
-    @NonNull private Insets insets = Insets.NONE;
+    private Insets insets = Insets.NONE;
 
-    protected InsetsHelper(@NonNull V view) {
+    protected InsetsHelper(V view) {
         this.view = view;
         ViewCompat.setOnApplyWindowInsetsListener(view, (v, windowInsets) -> {
             windowInsetsInstant = windowInsets;
@@ -36,14 +36,13 @@ abstract class InsetsHelper<V extends View> {
         });
         ViewCompat.setWindowInsetsAnimationCallback(view, new WindowInsetsAnimationCompat.Callback(WindowInsetsAnimationCompat.Callback.DISPATCH_MODE_CONTINUE_ON_SUBTREE) {
             @Override
-            public void onPrepare(@NonNull WindowInsetsAnimationCompat animation) {
+            public void onPrepare(WindowInsetsAnimationCompat animation) {
                 windowInsetsAnimationRunning = true;
                 windowInsetsAnimated = null;
             }
 
-            @NonNull
             @Override
-            public WindowInsetsCompat onProgress(@NonNull WindowInsetsCompat windowInsets, @NonNull List<WindowInsetsAnimationCompat> runningAnimations) {
+            public WindowInsetsCompat onProgress(WindowInsetsCompat windowInsets, List<WindowInsetsAnimationCompat> runningAnimations) {
                 windowInsetsAnimated = windowInsets;
                 if (insetsSmoothResize) {
                     notifyInsetsUpdate();
@@ -52,27 +51,25 @@ abstract class InsetsHelper<V extends View> {
             }
 
             @Override
-            public void onEnd(@NonNull WindowInsetsAnimationCompat animation) {
+            public void onEnd(WindowInsetsAnimationCompat animation) {
                 windowInsetsAnimated = null;
                 windowInsetsAnimationRunning = false;
             }
         });
     }
 
-    public void initInsetsType(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsType(TypedArray a, @StyleableRes int index) {
         insetsType = a.getInt(index, InsetsWidget.INSETS_TYPE_NONE);
     }
 
-    public void initInsetsSmoothResize(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsSmoothResize(TypedArray a, @StyleableRes int index) {
         insetsSmoothResize = a.getBoolean(index, true);
     }
 
-    @NonNull
     protected V getView() {
         return view;
     }
 
-    @NonNull
     public Insets getInsets() {
         return insets;
     }

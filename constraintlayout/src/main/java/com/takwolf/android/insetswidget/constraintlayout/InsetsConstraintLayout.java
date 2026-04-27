@@ -6,8 +6,6 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 
 import androidx.annotation.AttrRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
@@ -15,30 +13,32 @@ import androidx.core.graphics.Insets;
 import com.takwolf.android.insetswidget.InsetsLayout;
 import com.takwolf.android.insetswidget.InsetsLayoutHelper;
 
+import org.jspecify.annotations.Nullable;
+
 public class InsetsConstraintLayout extends ConstraintLayout implements InsetsLayout {
     private final InsetsLayoutHelper helper = new InsetsLayoutHelper(this);
     
-    public InsetsConstraintLayout(@NonNull Context context) {
+    public InsetsConstraintLayout(Context context) {
         super(context);
         init(context, null, 0, 0);
     }
 
-    public InsetsConstraintLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public InsetsConstraintLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0, 0);
     }
 
-    public InsetsConstraintLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    public InsetsConstraintLayout(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr, 0);
     }
 
-    public InsetsConstraintLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
+    public InsetsConstraintLayout(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    private void init(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
+    private void init(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
         try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsConstraintLayout, defStyleAttr, defStyleRes)) {
             helper.initInsetsType(a, R.styleable.InsetsConstraintLayout_isw_insetsType);
             helper.initInsetsSmoothResize(a, R.styleable.InsetsConstraintLayout_isw_insetsSmoothResize);
@@ -53,7 +53,6 @@ public class InsetsConstraintLayout extends ConstraintLayout implements InsetsLa
         }
     }
 
-    @NonNull
     @Override
     public Insets getInsets() {
         return helper.getInsets();
@@ -166,7 +165,7 @@ public class InsetsConstraintLayout extends ConstraintLayout implements InsetsLa
     }
 
     @Override
-    protected void dispatchDraw(@NonNull Canvas canvas) {
+    protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
         helper.onDraw(canvas);
     }

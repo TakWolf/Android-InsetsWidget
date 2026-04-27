@@ -1,7 +1,6 @@
 package com.takwolf.android.insetswidget;
 
 import androidx.annotation.IntDef;
-import androidx.annotation.NonNull;
 import androidx.core.graphics.Insets;
 
 import java.lang.annotation.Retention;
@@ -39,7 +38,6 @@ public interface InsetsWidget {
     @Retention(RetentionPolicy.SOURCE)
     @interface InsetsType {}
 
-    @NonNull
     Insets getInsets();
 
     @InsetsWidget.InsetsType

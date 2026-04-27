@@ -2,10 +2,8 @@ package com.takwolf.android.insetswidget;
 
 import android.view.View;
 
-import androidx.annotation.NonNull;
-
 public class InsetsWidgetHelper extends InsetsHelper<View> {
-    public InsetsWidgetHelper(@NonNull View view) {
+    public InsetsWidgetHelper(View view) {
         super(view);
     }
 

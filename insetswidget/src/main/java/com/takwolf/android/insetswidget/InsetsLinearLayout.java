@@ -7,35 +7,35 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 import androidx.annotation.AttrRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
 import androidx.core.graphics.Insets;
+
+import org.jspecify.annotations.Nullable;
 
 public class InsetsLinearLayout extends LinearLayout implements InsetsLayout {
     private final InsetsLayoutHelper helper = new InsetsLayoutHelper(this);
     
-    public InsetsLinearLayout(@NonNull Context context) {
+    public InsetsLinearLayout(Context context) {
         super(context);
         init(context, null, 0, 0);
     }
 
-    public InsetsLinearLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public InsetsLinearLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0, 0);
     }
 
-    public InsetsLinearLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    public InsetsLinearLayout(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr, 0);
     }
 
-    public InsetsLinearLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
+    public InsetsLinearLayout(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    private void init(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
+    private void init(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
         try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsLinearLayout, defStyleAttr, defStyleRes)) {
             helper.initInsetsType(a, R.styleable.InsetsLinearLayout_isw_insetsType);
             helper.initInsetsSmoothResize(a, R.styleable.InsetsLinearLayout_isw_insetsSmoothResize);
@@ -50,7 +50,6 @@ public class InsetsLinearLayout extends LinearLayout implements InsetsLayout {
         }
     }
 
-    @NonNull
     @Override
     public Insets getInsets() {
         return helper.getInsets();
@@ -163,7 +162,7 @@ public class InsetsLinearLayout extends LinearLayout implements InsetsLayout {
     }
 
     @Override
-    protected void dispatchDraw(@NonNull Canvas canvas) {
+    protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
         helper.onDraw(canvas);
     }

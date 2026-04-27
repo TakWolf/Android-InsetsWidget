@@ -7,7 +7,6 @@ import android.graphics.Paint;
 import android.view.ViewGroup;
 
 import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
 import androidx.annotation.StyleableRes;
 import androidx.core.graphics.Insets;
 
@@ -23,39 +22,39 @@ public class InsetsLayoutHelper extends InsetsHelper<ViewGroup> {
 
     private final Paint paint = new Paint();
 
-    public InsetsLayoutHelper(@NonNull ViewGroup viewGroup) {
+    public InsetsLayoutHelper(ViewGroup viewGroup) {
         super(viewGroup);
     }
 
-    public void initInsetsPaddingLeft(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsPaddingLeft(TypedArray a, @StyleableRes int index) {
         insetsPaddingLeft = a.getBoolean(index, true);
     }
 
-    public void initInsetsPaddingTop(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsPaddingTop(TypedArray a, @StyleableRes int index) {
         insetsPaddingTop = a.getBoolean(index, true);
     }
 
-    public void initInsetsPaddingRight(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsPaddingRight(TypedArray a, @StyleableRes int index) {
         insetsPaddingRight = a.getBoolean(index, true);
     }
 
-    public void initInsetsPaddingBottom(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsPaddingBottom(TypedArray a, @StyleableRes int index) {
         insetsPaddingBottom = a.getBoolean(index, true);
     }
 
-    public void initInsetsColorLeft(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsColorLeft(TypedArray a, @StyleableRes int index) {
         insetsColorLeft = a.getColor(index, Color.TRANSPARENT);
     }
 
-    public void initInsetsColorTop(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsColorTop(TypedArray a, @StyleableRes int index) {
         insetsColorTop = a.getColor(index, Color.TRANSPARENT);
     }
 
-    public void initInsetsColorRight(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsColorRight(TypedArray a, @StyleableRes int index) {
         insetsColorRight = a.getColor(index, Color.TRANSPARENT);
     }
 
-    public void initInsetsColorBottom(@NonNull TypedArray a, @StyleableRes int index) {
+    public void initInsetsColorBottom(TypedArray a, @StyleableRes int index) {
         insetsColorBottom = a.getColor(index, Color.TRANSPARENT);
     }
 
@@ -188,7 +187,7 @@ public class InsetsLayoutHelper extends InsetsHelper<ViewGroup> {
         viewGroup.invalidate();
     }
 
-    public void onDraw(@NonNull Canvas canvas) {
+    public void onDraw(Canvas canvas) {
         Insets insets = getInsets();
         ViewGroup viewGroup = getView();
         int x = viewGroup.getScrollX();

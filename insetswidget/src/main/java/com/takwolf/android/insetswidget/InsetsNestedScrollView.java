@@ -6,30 +6,30 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 
 import androidx.annotation.AttrRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.graphics.Insets;
 import androidx.core.widget.NestedScrollView;
+
+import org.jspecify.annotations.Nullable;
 
 public class InsetsNestedScrollView extends NestedScrollView implements InsetsLayout {
     private final InsetsLayoutHelper helper = new InsetsLayoutHelper(this);
 
-    public InsetsNestedScrollView(@NonNull Context context) {
+    public InsetsNestedScrollView(Context context) {
         super(context);
         init(context, null, 0);
     }
 
-    public InsetsNestedScrollView(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public InsetsNestedScrollView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0);
     }
 
-    public InsetsNestedScrollView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    public InsetsNestedScrollView(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
 
-    private void init(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    private void init(Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InsetsNestedScrollView, defStyleAttr, 0)) {
             helper.initInsetsType(a, R.styleable.InsetsNestedScrollView_isw_insetsType);
             helper.initInsetsSmoothResize(a, R.styleable.InsetsNestedScrollView_isw_insetsSmoothResize);
@@ -44,7 +44,6 @@ public class InsetsNestedScrollView extends NestedScrollView implements InsetsLa
         }
     }
 
-    @NonNull
     @Override
     public Insets getInsets() {
         return helper.getInsets();
@@ -157,7 +156,7 @@ public class InsetsNestedScrollView extends NestedScrollView implements InsetsLa
     }
 
     @Override
-    protected void dispatchDraw(@NonNull Canvas canvas) {
+    protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
         helper.onDraw(canvas);
     }
