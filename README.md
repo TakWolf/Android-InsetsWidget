@@ -8,7 +8,7 @@
 ## Installation
 
 ```kotlin
-implementation("androidx.core:core-ktx:1.18.0")
+implementation("androidx.core:core-ktx:1.19.0")
 implementation("androidx.activity:activity-ktx:1.13.0")
 implementation("io.github.takwolf.android.insetswidget:insetswidget:0.0.2")
 

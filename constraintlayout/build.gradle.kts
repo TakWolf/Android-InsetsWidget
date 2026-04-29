@@ -25,7 +25,7 @@ android {
 
 dependencies {
     compileOnly("org.jspecify:jspecify:1.0.0")
-    compileOnly("androidx.core:core-ktx:1.18.0")
+    compileOnly("androidx.core:core-ktx:1.19.0")
     compileOnly("androidx.constraintlayout:constraintlayout:2.2.1")
     api(project(":insetswidget"))
 }
