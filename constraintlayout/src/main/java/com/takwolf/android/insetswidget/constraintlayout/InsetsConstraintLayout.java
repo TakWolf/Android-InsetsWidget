@@ -17,7 +17,7 @@ import org.jspecify.annotations.Nullable;
 
 public class InsetsConstraintLayout extends ConstraintLayout implements InsetsLayout {
     private final InsetsLayoutHelper helper = new InsetsLayoutHelper(this);
-    
+
     public InsetsConstraintLayout(Context context) {
         super(context);
         init(context, null, 0, 0);

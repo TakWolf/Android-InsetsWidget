@@ -59,7 +59,7 @@ class SomeActivity : AppCompatActivity() {
 
 - `InsetsFrameLayout`
 - `InsetsLinearLayout`
-- `InsetsNestedScrollView`  
+- `InsetsNestedScrollView`
 - `InsetsConstraintLayout`
 
 这个类型的组件，会自动添加 `Padding` 来适配窗口附加物类型的尺寸。也可以额外配置颜色。例如：
@@ -75,9 +75,9 @@ class SomeActivity : AppCompatActivity() {
     app:isw_insetsPaddingBottom="false"
     app:isw_insetsColorTop="@color/translucent_black"
     app:isw_insetsColorBottom="@color/translucent_black">
-    
+
     <YourView />
-    
+
 </com.takwolf.android.insetswidget.InsetsLinearLayout>
 ```
 

@@ -14,7 +14,7 @@ import org.jspecify.annotations.Nullable;
 
 public class InsetsLinearLayout extends LinearLayout implements InsetsLayout {
     private final InsetsLayoutHelper helper = new InsetsLayoutHelper(this);
-    
+
     public InsetsLinearLayout(Context context) {
         super(context);
         init(context, null, 0, 0);
